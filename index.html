@@ -5,9 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fernando Pérez de Ayala - Resume / CV </title>
+  <!-- fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- styles -->
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: "Saira", system-ui;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings:
+        "wdth" 100;
       line-height: 1.6;
       margin: 0;
       color: #333;
@@ -27,6 +37,19 @@
       background-color: #9bd7ff;
       padding: 1rem 50vw;
       margin: 0 -50vw;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+    }
+    
+    .name-title {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; 
+      flex-wrap: wrap;
     }
 
     h1,
@@ -52,6 +75,17 @@
     li {
       margin-bottom: 10px;
     }
+
+    .contact {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .contact p {
+      margin: 0;
+    }
   </style>
 </head>
 
@@ -59,17 +93,20 @@
   <div class="wrapper">
     <div class="container">
       <div class="header">
-        <h1>Fernando Pérez de Ayala</h1>
+        <h1 class="name-title"><span style="padding-right: 1rem;">Fernando </span><span>Pérez de Ayala</span></h1>
         <p>Full Stack Developer | SPA & Server-Side | Framework Agnostic | Clean Coding | Tailored Data Visualizations |
           In-Browser 3D Rendering </p>
-        <div></div>
+        <div class="contact">
+          <p><span>📍</span>European Economic Area</p>
+          <a href="mailto:ferp@protonmail.ch"> <span style="padding: 0 4px;">&#9993;</span>ferp@protonmail.ch</a>
+          <p>
+            <link rel="icon" href="https://www.linkedin.com/favicon.ico" type="image/x-icon"> <a
+              href="https://www.linkedin.com/in/fernando-perez-de-ayala/"
+              target="_blank">linkedin.com/in/fernando-perez-de-ayala</a>
+          </p>
+        </div>
       </div>
 
-      <h2 class="section-title">Contact Information</h2>
-      <p>Location: European Economic Area</p>
-      <p>Email: ferp@protonmail.ch</p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/fernando-perez-de-ayala/"
-          target="_blank">linkedin.com/in/fernando-perez-de-ayala</a></p>
 
       <h2 class="section-title">Summary</h2>
       <p>
@@ -178,21 +215,21 @@
       <h2 class="section-title">Skills</h2>
       <ul>
         <li>Full Stack Development</li>
+        <li>API REST and Web Servers.</li>
+        <li>Synchronous and Asynchronous processing.</li>
+        <li>Testable UI Architecture </li>
         <li>React, Node.js, Django REST Framework</li>
         <li>TypeScript, D3.js, Data Visualizations</li>
-        <li>Testable UI Architecture </li>
-        <li> API REST and Web Servers.</li>
-        <li> Synchronous and Asynchronous processing.</li>
-        <li> Javascript, Express</li>
-        <li> PostGreSQL, MongoDB</li>
-        <li> MobX- Redux</li>
-        <li> HTML5 + CSS3 + React</li>
-        <li> D3js - vector graphics</li>
-        <li> Threejs - In-Browser 3D Rendering</li>
-        <li> Docker - cloud deployment</li>
-        <li> Vim - VSCode</li>
-        <li> Python - Flask / Django,</li>
-        <li> PyEnv Jupyter Numpy/Pandas</li>
+        <li>Javascript, Express</li>
+        <li>PostGreSQL, MongoDB</li>
+        <li>State Management MobX- Redux</li>
+        <li>HTML5 + CSS3 + React</li>
+        <li>SVG - vector graphics</li>
+        <li>Threejs - In-Browser 3D Rendering</li>
+        <li>Docker - cloud deployment</li>
+        <li>Vim - VSCode</li>
+        <li>Python - Flask / Django,</li>
+        <li>PyEnv Jupyter Numpy/Pandas</li>
       </ul>
 
       <h2 class="section-title">Projects</h2>
