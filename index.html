@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fernando Pérez de Ayala - Resume / CV </title>
+  <title>FERNANDO PÉREZ DE AYALA - Resume / CV </title>
   <!-- fonts  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,75 @@
     rel="stylesheet">
   <!-- styles -->
   <style>
+    /*
+  1. Use a more-intuitive box-sizing model.
+*/
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /*
+  2. Remove default margin
+*/
+    * {
+      margin: 0;
+    }
+
+    /*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /*
+  5. Improve media defaults
+*/
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    /*
+  6. Remove built-in form typography styles
+*/
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    /*
+  7. Avoid text overflows
+*/
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
+
+    /*
+  8. Create a root stacking context
+*/
+    #root,
+    #__next {
+      isolation: isolate;
+    }
+
     body {
       font-family: "Saira", system-ui;
       font-optical-sizing: auto;
@@ -43,13 +112,35 @@
       font-size: 2.5rem;
       margin-bottom: 0;
     }
-    
-    .name-title {
+
+    .main-title,
+    .subtitle {
       margin: 0;
       display: flex;
       flex-direction: row;
-      justify-content: center; 
+      justify-content: center;
       flex-wrap: wrap;
+    }
+
+    .subtitle {
+      margin-bottom: 1rem;
+    }
+
+    .tech-summary {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tech-summary p {
+      margin: 0 1rem 0 0;
+    }
+
+    .tech-summary p::before {
+      content: "🔧";
+      margin-right: 0.5rem;
     }
 
     h1,
@@ -63,6 +154,7 @@
 
     .section-title {
       margin-top: 40px;
+      margin-bottom: 20px;
       border-bottom: 2px solid #3498db;
       padding-bottom: 5px;
     }
@@ -93,9 +185,16 @@
   <div class="wrapper">
     <div class="container">
       <div class="header">
-        <h1 class="name-title"><span style="padding-right: 1rem;">Fernando </span><span>Pérez de Ayala</span></h1>
-        <p>Full Stack Developer | SPA & Server-Side | Framework Agnostic | Clean Coding | Tailored Data Visualizations |
-          In-Browser 3D Rendering </p>
+        <h1 class="main-title"><span style="padding-right: 1rem;">FERNANDO </span><span>PÉREZ DE AYALA</span></h1>
+        <h2 class="subtitle">Software Developer</h2>
+        <div class="tech-summary">
+          <p>SPA & Server-Side</p>
+          <p>Framework Agnostic</p>
+          <p>Clean Coding</p>
+          <p>Tailored Data Visualizations
+          </p>
+          <p>In-Browser 3D Rendering</p>
+        </div>
         <div class="contact">
           <p><span>📍</span>European Economic Area</p>
           <a href="mailto:ferp@protonmail.ch"> <span style="padding: 0 4px;">&#9993;</span>ferp@protonmail.ch</a>
@@ -108,8 +207,28 @@
       </div>
 
 
-      <h2 class="section-title">Summary</h2>
-      <p>
+      <section>
+        <h2 class="section-title">Summary</h2>
+        <p><strong>Experienced Full Stack Developer</strong> with a focus on the <strong>MERN stack, client and
+            server-side
+            development, In-Browser 3D Rendering</strong>, and <strong>custom data visualizations</strong>. Proficient
+          in
+          Test Driven Development and <strong>leading</strong> front-end teams. Skilled in <strong>React, Nextjs,
+            RESTful
+            APIs</strong>, and <strong>statistical data analysis</strong> using <strong>numpy</strong> and
+          <strong>pandas</strong>.
+        </p>
+
+        <p>As a seasoned full-stack developer, I bring <strong>in-depth knowledge of SPA architecture</strong>,
+          particularly
+          focused on ensuring testability, along with a commitment to <strong>TDD</strong> and clean coding. I thrive in
+          <strong>collaborative</strong> environments</strong> with Product Owners, Customers, and Designers, balancing
+          <strong>team synergy</strong> with a strong sense of <strong>UI design</strong> and <strong>visual
+            harmony</strong>. <strong>Equally adept at autonomous work</strong>, I blend <strong>technical
+            expertise</strong> with a keen eye for <strong>aesthetics</strong>.
+        </p>
+      </section>
+      <!-- <p>
         <strong>Experienced Full Stack Developer and Tech Lead</strong> with a strong background in leading and
         developing complex web applications. <strong>He co-founded Agiliza Seller S.L.</strong>, where he leads the
         design and
@@ -135,122 +254,136 @@
         in making complex, challenging projects a reality. He is highly <strong>outcome-focused</strong> and strives to
         ensure his teams
         enjoy the process while delivering high-quality results.
-      </p>
-
-      <!-- <p><strong>Experienced Full Stack Developer</strong> with a focus on the <strong>MERN stack, server-side
-          development, In-Browser 3D Rendering</strong>, and <strong>custom data visualizations</strong>. Proficient in
-        Test Driven Development and <strong>leading</strong> front-end teams. Skilled in <strong>React, Node.js, REST
-          APIs</strong>, and <strong>statistical data analysis</strong> using <strong>numpy</strong> and
-        <strong>pandas</strong>.
-      </p>
-
-      <p>As a seasoned full-stack developer, I bring <strong>in-depth knowledge of SPA architecture</strong>,
-        particularly
-        focused on ensuring testability, along with a commitment to <strong>TDD</strong> and clean coding. I thrive in
-        <strong>collaborative</strong> environments</strong> with Product Owners, Customers, and Designers, balancing
-        <strong>team synergy</strong> with a strong sense of <strong>UI design</strong> and <strong>visual
-          harmony</strong>. <strong>Equally adept at autonomous work</strong>, I blend <strong>technical
-          expertise</strong> with a keen eye for <strong>aesthetics</strong>.
       </p> -->
 
 
-      <h2 class="section-title">Experience</h2>
-      <ul>
-        <li>
-          <strong>Lead Developer & Co-Founder</strong> Agiliza Seller S.L.- Feb 2024 to Present
-          <p>Design and Development of Web Platform. Involving React, Nextjs and FastAPI as main
-            stack.</p>
-        </li>
-        <li>
-          <strong>Full Stack Developer (Freelance)</strong> - May 2023 to Feb 2024
-          <p>Autonomously delivered on various projects, including landing sites and web-3 applications using TypeScript
-            and Next.js.</p>
-        </li>
-        <li>
-          <strong>Full Stack Developer / Frontend Tech Lead</strong> - DeNexus Inc., Oct 2020 to Apr 2023
-          <p>Development of flagship risk analytics platform "DeRisk" from prototype stage to maturity,
-            collaborated on data visualization, and led a front-end team while working on API integration and mentoring
-            new members.</p>
-        </li>
-        <li>
-          <strong>Web Developer</strong> - Flat 101, Jun 2020 to Oct 2020
-          <p>Improved SEO for a React frontend and integrated components into a CMS for a national newspaper (El País).
-          </p>
-        </li>
-        <li>
-          <strong>Full Stack Web Developer</strong> - Dentt, Jul 2019 to Jul 2020
-          <p>Developed and deployed a marketing tool for dentists using Node.js and React, focusing on API integration
-            and automated tasks.</p>
-        </li>
-        <li>
-          <strong>Frontend Web Developer</strong> - JoinedApp, Feb 2019 to Jun 2019
-          <p> Refactored and developed complex React applications, with a focus on testing, and agile
-            methodologies.</p>
-        </li>
-        <li>
-          <strong>Automotive Engineer</strong> Iveco S.P.A. - Oct 2016 to Jan 2019
-          <p>Designed and adapted heavy vehicles for special purposes, ensured quality through 3D analysis, and
-            implemented a SQL database for backend and frontend use.</p>
-        </li>
-        <li>
-          <strong>Laboratory Technician</strong> Hochschule Mannheim - Jan 2013 to Aug 2013
-          <p>Replaced, installed, and programmed an ABB IRB2400 robot ensemble at the Institute of Production Technology
-            in Mannheim.</p>
-        </li>
-      </ul>
 
-      <h2 class="section-title">Education</h2>
-      <ul>
-        <li>
-          <strong>Ironhack</strong> - Web Development, 2018
-        </li>
-        <li>
-          <strong>Hochschule Mannheim</strong> - Bachelor of Engineering, Mechanical Engineering, 2013
-        </li>
-        <li>
-          <strong>Universidad de Sevilla</strong> - Bachelor of Engineering, Mechanical Engineering, 2007 to 2013
-        </li>
-      </ul>
+      <section>
+        <h2 class="section-title">Experience</h2>
+        <ul>
+          <li>
+            <strong>Lead Developer & Co-Founder</strong> Agiliza Seller S.L.- Feb 2024 to Present
+            <p>Design and Development of Web Platform. Involving React, Nextjs and FastAPI as main
+              stack.</p>
+          </li>
+          <li>
+            <strong>Full Stack Developer (Freelance)</strong> - May 2023 to Feb 2024
+            <p>Autonomously delivered on various projects, including landing sites and web-3 applications using
+              TypeScript
+              and Next.js.</p>
+          </li>
+          <li>
+            <strong>Full Stack Developer / Frontend Tech Lead</strong> - DeNexus Inc., Oct 2020 to Apr 2023
+            <p>Development of flagship risk analytics platform "DeRisk" from prototype stage to maturity,
+              collaborated on data visualization, and led a front-end team while working on API integration and
+              mentoring
+              new members.</p>
+          </li>
+          <li>
+            <strong>Web Developer</strong> - Flat 101, Jun 2020 to Oct 2020
+            <p>Improved SEO for a React frontend and integrated components into a CMS for a national newspaper (El
+              País).
+            </p>
+          </li>
+          <li>
+            <strong>Full Stack Web Developer</strong> - Dentt, Jul 2019 to Jul 2020
+            <p>Developed and deployed a marketing tool for dentists using Node.js and React, focusing on API integration
+              and automated tasks.</p>
+          </li>
+          <li>
+            <strong>Frontend Web Developer</strong> - JoinedApp, Feb 2019 to Jun 2019
+            <p> Refactored and developed complex React applications, with a focus on testing, and agile
+              methodologies.</p>
+          </li>
+          <li>
+            <strong>Automotive Engineer</strong> Iveco S.P.A. - Oct 2016 to Jan 2019
+            <p>Designed and adapted heavy vehicles for special purposes, ensured quality through 3D analysis, and
+              implemented a SQL database for backend and frontend use.</p>
+          </li>
+          <li>
+            <strong>Laboratory Technician</strong> Hochschule Mannheim - Jan 2013 to Aug 2013
+            <p>Replaced, installed, and programmed an ABB IRB2400 robot ensemble at the Institute of Production
+              Technology
+              in Mannheim.</p>
+          </li>
+        </ul>
+      </section>
 
-      <h2 class="section-title">Skills</h2>
-      <ul>
-        <li>Full Stack Development</li>
-        <li>API REST and Web Servers.</li>
-        <li>Synchronous and Asynchronous processing.</li>
-        <li>Testable UI Architecture </li>
-        <li>React, Node.js, Django REST Framework</li>
-        <li>TypeScript, D3.js, Data Visualizations</li>
-        <li>Javascript, Express</li>
-        <li>PostGreSQL, MongoDB</li>
-        <li>State Management MobX- Redux</li>
-        <li>HTML5 + CSS3 + React</li>
-        <li>SVG - vector graphics</li>
-        <li>Threejs - In-Browser 3D Rendering</li>
-        <li>Docker - cloud deployment</li>
-        <li>Vim - VSCode</li>
-        <li>Python - Flask / Django,</li>
-        <li>PyEnv Jupyter Numpy/Pandas</li>
-      </ul>
+      <section>
+        <h2 class="section-title">Education</h2>
+        <ul>
+          <li>
+            <strong>Ironhack</strong> - Web Development, 2018
+          </li>
+          <li>
+            <strong>Hochschule Mannheim</strong> - Bachelor of Engineering, Mechanical Engineering, 2013
+          </li>
+          <li>
+            <strong>Universidad de Sevilla</strong> - Bachelor of Engineering, Mechanical Engineering, 2007 to 2013
+          </li>
+        </ul>
+      </section>
 
-      <h2 class="section-title">Projects</h2>
-      <ul>
-        <li>
-          <strong>Site for Centro Leon Hebreo</strong> - Aug 2023
-          <p>Built an official site with Next.js for an organization dedicated to Hebrew heritage studies.</p>
-        </li>
-        <li>
-          <strong>Cryptobase</strong> - Nov 2018 to Dec 2019
-          <p>A cryptocurrency portal with analytical tools and custom charts connected to various APIs.</p>
-        </li>
-      </ul>
+      <section>
+        <h2 class="section-title">Skills</h2>
+        <ul>
+          <li>Full Stack Development</li>
+          <li>API REST and Web Servers.</li>
+          <li>Synchronous and Asynchronous processing.</li>
+          <li>Testable UI Architecture </li>
+          <li>React, Node.js, Django REST Framework</li>
+          <li>TypeScript, D3.js, Data Visualizations</li>
+          <li>Javascript, Express</li>
+          <li>PostGreSQL, MongoDB</li>
+          <li>State Management MobX- Redux</li>
+          <li>HTML5 + CSS3 + React</li>
+          <li>SVG - vector graphics</li>
+          <li>Threejs - In-Browser 3D Rendering</li>
+          <li>Docker - cloud deployment</li>
+          <li>Vim - VSCode</li>
+          <li>Python - Flask / Django,</li>
+          <li>PyEnv Jupyter Numpy/Pandas</li>
+        </ul>
+      </section>
 
-      <h2 class="section-title">Languages</h2>
-      <ul>
-        <li>English - Native or bilingual proficiency</li>
-        <li>Spanish - Native</li>
-        <li>German - Competent - once fluent now a bit rusty (C1/B2)</li>
-        <li>French - Limited working proficiency (B1/B2)</li>
-      </ul>
+      <section>
+        <h2 class="section-title">Project Highlights</h2>
+        <ul>
+          <li>
+            <strong>Agiliza Seller Platform</strong> - Feb 2024 to Present
+            <p>Suite of tools designed to increase profitability for Amazon FBA sellers.</p>
+          </li>
+          <li>
+            <strong>Site for Centro Leon Hebreo</strong> - Aug 2023
+            <p>Official site built with Next.js for an organization dedicated to Hebrew heritage studies.</p>
+          </li>
+          <li>
+            <strong>DeRISK Platform v4 & v5</strong>
+            <p>Risk analytics platform, leading a team of front-end developers while collaborating closely with business
+              stakeholders, data scientists, and engineers to bring a complex project to life.</p>
+          </li>
+          <li>
+            <strong>El Pais -SEO optimization-</strong>
+            <p>SEO including performance optimization, structured data, opengraph data among other improvements within
+              the
+              React-based Washington Post's CMS in use by El País.</p>
+          </li>
+          <li>
+            <strong>Cryptobase</strong> - Nov 2018 to Dec 2019
+            <p>A cryptocurrency portal with analytical tools and custom charts connected to various APIs.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title">Languages</h2>
+        <ul>
+          <li>English - Native or bilingual proficiency</li>
+          <li>Spanish - Native</li>
+          <li>German - Competent - once fluent now a bit rusty (C1/B2)</li>
+          <li>French - Limited working proficiency (B1/B2)</li>
+        </ul>
+      </section>
     </div>
   </div>
 </body>
