@@ -81,6 +81,25 @@
       isolation: isolate;
     }
 
+  /* end reset */
+
+  /* color variables */
+  :root {
+    --color-primary: #3498db;
+    --color-secondary: #2ecc71;
+    --color-tertiary: #e74c3c;
+    --color-quaternary: #f39c12;
+    --color-quinary: #9b59b6;
+    --color-text: #333;
+    --color-background: #9bd7ff;
+    --color-border: #3498db;
+
+    /* dark mode */
+    --color-text-dark: #f9f9f9;
+    --dark-mode-titles: #c5d5ec;
+    --color-background-dark: #333;
+  }
+  
     body {
       font-family: "Saira", system-ui;
       font-optical-sizing: auto;
@@ -89,7 +108,7 @@
         "wdth" 100;
       line-height: 1.6;
       margin: 0;
-      color: #333;
+      color: var(--color-text);
     }
 
     .wrapper {
@@ -103,7 +122,7 @@
     }
 
     .header {
-      background-color: #9bd7ff;
+      background-color: var(--color-background);
       padding: 1rem 50vw;
       margin: 0 -50vw;
       position: relative;
@@ -123,6 +142,11 @@
       flex-wrap: wrap;
     }
 
+
+    .main-title > span {
+      text-align: center; 
+    }
+
     .subtitle {
       margin-bottom: 1rem;
     }
@@ -137,6 +161,7 @@
 
     .tech-summary p {
       margin: 0 1rem 0 0;
+      text-align: center;
     }
 
     .tech-summary p::before {
@@ -209,6 +234,27 @@
     .round {
       border-radius: 50%;
       overflow: hidden;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--color-background-dark);
+        color: #fff;
+      }
+
+      .header {
+        background-color: #333;
+      }
+
+      h1,
+      h2 {
+        color: var(--dark-mode-titles);
+      }
+
+      .skill-list>li {
+        border-color: var(--color-border);
+        color: var(--color-text-dark);
+      }
     }
   </style>
 </head>
@@ -299,7 +345,7 @@
           </li>
           <li>
             <strong>Full Stack Developer</strong> - <b><i>Freelance</i></b> - May 2023 to Feb 2024
-            <p>Autonomously delivered on various projects, including landing sites and web-3 applications using
+            <p>Autonomous delivery and collaboration on various projects, including landing sites and web-3 applications using
               TypeScript and Next.js.</p>
           </li>
           <li>
@@ -310,28 +356,27 @@
           </li>
           <li>
             <strong>Web Developer</strong> - <b><i>Flat 101</b><i> - Jun 2020 to Oct 2020
-            <p>Improved SEO for a React frontend and integrated components into a CMS for a national newspaper (El
-              País).
+            <p>Search Engine Optimization on the React-based CMS for the national newspaper (El País).
             </p>
           </li>
           <li>
             <strong>Full Stack Web Developer</strong> - <b><i>Dentt</b><i> - Jul 2019 to Jul 2020
-            <p>Developed and deployed a marketing tool for dentists using Node.js and React, focusing on API integration
+            <p>Developement and deployment of a marketing tool for dentists using Node.js and React, focusing on API integration
               and automated tasks.</p>
           </li>
           <li>
             <strong>Frontend Web Developer</strong> - <b><i>JoinedApp</b><i> - Feb 2019 to Jun 2019
-            <p> Refactored and developed complex React applications, with a focus on testing, and agile
+            <p> Refactoring and development of complex React applications, with a focus on testing, and agile
               methodologies.</p>
           </li>
           <li>
             <strong>Automotive Engineer</strong> - <b><i>Iveco S.P.A.</b><i> - Oct 2016 to Jan 2019
-            <p>Designed and adapted heavy vehicles for special purposes, ensured quality through 3D analysis, and
-              implemented a SQL database for backend and frontend use.</p>
+            <p>Design and adaptation of heavy vehicles for special purposes, quality assurance through 3D analysis, and
+              implementation of a SQL database for backend and frontend use.</p>
           </li>
           <li>
             <strong>Laboratory Technician</strong> - <b><i>Hochschule Mannheim</b><i> - Jan 2013 to Aug 2013
-            <p>Replaced, installed, and programmed an ABB IRB2400 robot ensemble at the Institute of Production
+            <p>Replacement, installation, and programming of an ABB IRB2400 robot ensemble at the Institute of Production
               Technology in Mannheim.</p>
           </li>
         </ul>
@@ -368,8 +413,7 @@
           <li>
             <strong>El Pais -SEO optimization-</strong>
             <p>SEO including performance optimization, structured data, opengraph data among other improvements within
-              the
-              React-based Washington Post's CMS in use by El País.</p>
+              the React-based Washington Post's CMS in use by El País.</p>
           </li>
           <li>
             <strong>Dentt Platform</strong>
@@ -400,22 +444,22 @@
           </li>
           <li>
             <strong>LPToolz</strong>
-            <p>Nodejs app for automating Liquidity Pool positions at Uniswap / Sushiswap</p>
+            <p>Nodejs app for automating Liquidity Pool positions at Uniswap / Sushiswap on the Polygon (matic) network.</p>
             <a href="https://github.com/ferpar/lptoolz" target="_blank">repository (private)</a>
           </li>
           <li>
             <strong>Notetaker - t3</strong>
-            <p>App for markdown note taking, based on Theos T3 stack</p>
+            <p>App for markdown note taking, based on Theos T3 stack.</p>
             <a href="https://github.com/ferpar/t3notetaker" target="_blank">repository</a>
           </li>
           <li>
             <strong>Nidek - scraper</strong>
-            <p>Scraping tool that checks your job offers for you</p>
+            <p>Scraping tool that checks your job offers for you.</p>
             <a href="https://github.com/ferpar/nidek" target="_blank">repository</a>
           </li>
           <li>
             <strong>JobTrackr</strong>
-            <p>Small application made to track job applications</p>
+            <p>Small application made to track job applications.</p>
             <a href="https://github.com/ferpar/JobTrackr" target="_blank">client</a>
             <a href="https://github.com/ferpar/jTrackerServices" target="_blank">server</a>
           </li>
@@ -424,13 +468,13 @@
             <strong>Survivors</strong>
             <p>Interactive Visualization of the results of a DCA-like strategy, results are calculated along 2 axis and
               displayed as a heatmap, for each point of the heatmap a candlechart is drawn alongside a cummulative of
-              funds </p>
+              funds.</p>
             <a href="https://github.com/ferpar/survivorUI" target="_blank">client</a>
             <a href="https://github.com/ferpar/survivor" target="_blank">server</a>
           </li>
           <li>
             <strong>React D3 Framer</strong>
-            <p>Animated chart involving React D3js and Framer Motion</p>
+            <p>Animated chart involving React D3js and Framer Motion.</p>
             <a href="https://github.com/ferpar/react-d3-framer" target="_blank">repository</a>
           </li>
         </ul>
