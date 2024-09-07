@@ -106,6 +106,7 @@
       background-color: #9bd7ff;
       padding: 1rem 50vw;
       margin: 0 -50vw;
+      position: relative;
     }
 
     h1 {
@@ -176,11 +177,33 @@
       justify-content: center;
     }
 
+    @media (min-width: 600px) {
+      .contact {
+        position: absolute;
+        top: 3rem;
+        justify-content: flex-end;
+        flex-direction: column;
+        right: calc(50vw + 2rem);
+      }
+    }
+
     .link-with-svg {
       display: flex;
       gap: 6px;
       flex-direction: row;
       align-items: center;
+    }
+
+    .skill-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-list>li {
+      padding: 0.5rem;
+      border: 1px solid #3498db;
+      border-radius: 5px;
     }
 
     .round {
@@ -249,20 +272,17 @@
 
       <section>
         <h2 class="section-title">Summary</h2>
-        <p><strong>Experienced Full Stack Developer</strong> with a focus on the <strong>MERN stack, client and
-            server-side
-            development, In-Browser 3D Rendering</strong>, and <strong>custom data visualizations</strong>. Proficient
-          in
-          Test Driven Development and <strong>leading</strong> front-end teams. Skilled in <strong>React, Nextjs,
-            RESTful
-            APIs</strong>, and <strong>statistical data analysis</strong> using <strong>numpy</strong> and
-          <strong>pandas</strong>.
+        <p><strong>Experienced Full Stack Developer</strong> with a focus on the <strong>MERN stack</strong>, client and
+          server-side development, <strong>In-Browser 3D Rendering</strong>, and custom data visualizations. Proficient
+          in <strong>Test Driven Development</strong> and leading front-end teams. Skilled in <strong>React, Nextjs,
+            RESTful APIs</strong>. Drawing from an <strong>engineering background</strong>, allowing to
+          deliver on complex and challenging projects.
         </p>
 
         <p>As a seasoned full-stack developer, I bring <strong>in-depth knowledge of SPA architecture</strong>,
-          particularly
-          focused on ensuring testability, along with a commitment to <strong>TDD</strong> and clean coding. I thrive in
-          <strong>collaborative</strong> environments</strong> with Product Owners, Customers, and Designers, balancing
+          particularly focused on <strong>ensuring testability and scalability</strong>. I thrive in
+          <strong>collaborative</strong>
+          environments</strong> with Product Owners, Customers, and Designers, balancing
           <strong>team synergy</strong> with a strong sense of <strong>UI design</strong> and <strong>visual
             harmony</strong>. <strong>Equally adept at autonomous work</strong>, I blend <strong>technical
             expertise</strong> with a keen eye for <strong>aesthetics</strong>.
@@ -365,37 +385,12 @@
       </section>
 
       <section>
-        <h2 class="section-title">Skills</h2>
-        <ul>
-          <li>Full Stack Development</li>
-          <li>API REST and Web Servers.</li>
-          <li>Synchronous and Asynchronous processing.</li>
-          <li>Testable UI Architecture </li>
-          <li>React, Node.js, Django REST Framework</li>
-          <li>TypeScript, D3.js, Data Visualizations</li>
-          <li>Javascript, Express</li>
-          <li>PostGreSQL, MongoDB</li>
-          <li>State Management MobX- Redux</li>
-          <li>HTML5 + CSS3 + React</li>
-          <li>SVG - vector graphics</li>
-          <li>Threejs - In-Browser 3D Rendering</li>
-          <li>Docker - cloud deployment</li>
-          <li>Vim - VSCode</li>
-          <li>Python - Flask / Django,</li>
-          <li>PyEnv Jupyter Numpy/Pandas</li>
-        </ul>
-      </section>
-
-      <section>
         <h2 class="section-title">Project Highlights</h2>
+        <h3>Full Time</h3>
         <ul>
           <li>
-            <strong>Agiliza Seller Platform</strong> - Feb 2024 to Present
+            <strong>Agiliza Seller Platform</strong>
             <p>Suite of tools designed to increase profitability for Amazon FBA sellers.</p>
-          </li>
-          <li>
-            <strong>Site for Centro Leon Hebreo</strong> - Aug 2023
-            <p>Official site built with Next.js for an organization dedicated to Hebrew heritage studies.</p>
           </li>
           <li>
             <strong>DeRISK Platform v4 & v5</strong>
@@ -409,9 +404,48 @@
               React-based Washington Post's CMS in use by El País.</p>
           </li>
           <li>
-            <strong>Cryptobase</strong> - Nov 2018 to Dec 2019
+            <strong>Dentt Platform</strong>
+            <p>Marketing Tool for dentists providing customer base analitics, appointment management with automated
+              reminders, as well as batch SMS marketing campaigns.</p>
+          </li>
+          <li>
+            <strong>JoinedApp</strong>
+            <p>React-based components for a Chatbot store, allowing to book dates and purchase products from within
+              Facebook Messenger.</p>
+          </li>
+          <h3>Freelance</h3>
+          <li>
+            <strong>Site for Centro Leon Hebreo</strong>
+            <p>Official site built with Next.js for an organization dedicated to Hebrew heritage studies.</p>
+          </li>
+          <li>
+            <strong>Cryptobase</strong>
             <p>A cryptocurrency portal with analytical tools and custom charts connected to various APIs.</p>
           </li>
+          <h3>Personal</h3>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title">Tech Summary</h2>
+        <ul class="skill-list">
+          <li>Full Stack Development</li>
+          <li>API REST and Web Servers.</li>
+          <li>Synchronous and Asynchronous processing.</li>
+          <li>Testable UI Architecture </li>
+          <li>React, Node.js, Django REST Framework</li>
+          <li>D3.js, Framer Motion</li>
+          <li>Typescript, ECMAScript</li>
+          <li>PostGreSQL, MongoDB</li>
+          <li>State Management MobX- Redux</li>
+          <li>HTML5 + CSS3 + React</li>
+          <li>Playwright - E2E testing</li>
+          <li>SVG - vector graphics</li>
+          <li>Threejs - In-Browser 3D Rendering</li>
+          <li>Docker - cloud deployment</li>
+          <li>Vim - VSCode</li>
+          <li>Python - Flask / Django / FastAPI,</li>
+          <li>PyEnv Jupyter Numpy/Pandas</li>
         </ul>
       </section>
 
