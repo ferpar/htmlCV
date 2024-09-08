@@ -81,25 +81,26 @@
       isolation: isolate;
     }
 
-  /* end reset */
+    /* end reset */
 
-  /* color variables */
-  :root {
-    --color-primary: #3498db;
-    --color-secondary: #2ecc71;
-    --color-tertiary: #e74c3c;
-    --color-quaternary: #f39c12;
-    --color-quinary: #9b59b6;
-    --color-text: #333;
-    --color-background: #9bd7ff;
-    --color-border: #3498db;
+    /* color variables */
+    :root {
+      --color-primary: #3498db;
+      /* --color-secondary: #2ecc71;
+      --color-tertiary: #e74c3c;
+      --color-quaternary: #f39c12;
+      --color-quinary: #9b59b6; */
+      --color-text: #333;
+      --color-background: #9bd7ff;
+      --color-border: #3498db;
+      --color-titles: #2c3e50;
 
-    /* dark mode */
-    --color-text-dark: #f9f9f9;
-    --dark-mode-titles: #c5d5ec;
-    --color-background-dark: #333;
-  }
-  
+      /* dark mode */
+      --color-text-dark: #f9f9f9;
+      --dark-mode-titles: #c5d5ec;
+      --color-background-dark: #333;
+    }
+
     body {
       font-family: "Saira", system-ui;
       font-optical-sizing: auto;
@@ -143,8 +144,8 @@
     }
 
 
-    .main-title > span {
-      text-align: center; 
+    .main-title>span {
+      text-align: center;
     }
 
     .subtitle {
@@ -171,7 +172,7 @@
 
     h1,
     h2 {
-      color: #2c3e50;
+      color: var(--color-titles);
     }
 
     h1 {
@@ -181,7 +182,7 @@
     .section-title {
       margin-top: 40px;
       margin-bottom: 20px;
-      border-bottom: 2px solid #3498db;
+      border-bottom: 2px solid var(--color-border);
       padding-bottom: 5px;
     }
 
@@ -239,11 +240,11 @@
     @media (prefers-color-scheme: dark) {
       body {
         background-color: var(--color-background-dark);
-        color: #fff;
+        color: var(--color-text-dark);
       }
 
       .header {
-        background-color: #333;
+        background-color: var(--color-background-dark);
       }
 
       h1,
@@ -254,6 +255,24 @@
       .skill-list>li {
         border-color: var(--color-border);
         color: var(--color-text-dark);
+      }
+
+      a:link {
+        color: lightskyblue;
+      }
+
+      a:visited {
+        color: #6d4b8d;
+      }
+
+      a:hover {
+        color: #ffffff;
+      }
+
+      a:active {
+        color: #ff4040;
+        text-decoration: none;
+        font-weight: normal;
       }
     }
   </style>
@@ -340,44 +359,49 @@
         <ul>
           <li>
             <strong>Lead Developer & Co-Founder</strong> - <b><i>Agiliza Seller S.L.</b><i>- Feb 2024 to Present
-            <p>Design and Development of Web Platform. Involving React, Nextjs and FastAPI as main
-              stack.</p>
+              <p>Design and Development of Web Platform. Involving React, Nextjs and FastAPI as main
+                stack.</p>
           </li>
           <li>
             <strong>Full Stack Developer</strong> - <b><i>Freelance</i></b> - May 2023 to Feb 2024
-            <p>Autonomous delivery and collaboration on various projects, including landing sites and web-3 applications using
+            <p>Autonomous delivery and collaboration on various projects, including landing sites and web-3 applications
+              using
               TypeScript and Next.js.</p>
           </li>
           <li>
-            <strong>Full Stack Developer / Frontend Tech Lead</strong> - <b><i>DeNexus Inc.</b><i> - Oct 2020 to Apr 2023
-            <p>Development of flagship risk analytics platform "DeRisk" from prototype stage to maturity,
-              collaborated on data visualization, and led a front-end team while working on API integration and
-              mentoring new members.</p>
+            <strong>Full Stack Developer / Frontend Tech Lead</strong> - <b><i>DeNexus Inc.</b><i> - Oct 2020 to Apr
+              2023
+              <p>Development of flagship risk analytics platform "DeRisk" from prototype stage to maturity,
+                collaborated on data visualization, and led a front-end team while working on API integration and
+                mentoring new members.</p>
           </li>
           <li>
             <strong>Web Developer</strong> - <b><i>Flat 101</b><i> - Jun 2020 to Oct 2020
-            <p>Search Engine Optimization on the React-based CMS for the national newspaper (El País).
-            </p>
+              <p>Search Engine Optimization on the React-based CMS for the national newspaper (El País).
+              </p>
           </li>
           <li>
             <strong>Full Stack Web Developer</strong> - <b><i>Dentt</b><i> - Jul 2019 to Jul 2020
-            <p>Developement and deployment of a marketing tool for dentists using Node.js and React, focusing on API integration
-              and automated tasks.</p>
+              <p>Developement and deployment of a marketing tool for dentists using Node.js and React, focusing on API
+                integration
+                and automated tasks.</p>
           </li>
           <li>
             <strong>Frontend Web Developer</strong> - <b><i>JoinedApp</b><i> - Feb 2019 to Jun 2019
-            <p> Refactoring and development of complex React applications, with a focus on testing, and agile
-              methodologies.</p>
+              <p> Refactoring and development of complex React applications, with a focus on testing, and agile
+                methodologies.</p>
           </li>
           <li>
             <strong>Automotive Engineer</strong> - <b><i>Iveco S.P.A.</b><i> - Oct 2016 to Jan 2019
-            <p>Design and adaptation of heavy vehicles for special purposes, quality assurance through 3D analysis, and
-              implementation of a SQL database for backend and frontend use.</p>
+              <p>Design and adaptation of heavy vehicles for special purposes, quality assurance through 3D analysis,
+                and
+                implementation of a SQL database for backend and frontend use.</p>
           </li>
           <li>
             <strong>Laboratory Technician</strong> - <b><i>Hochschule Mannheim</b><i> - Jan 2013 to Aug 2013
-            <p>Replacement, installation, and programming of an ABB IRB2400 robot ensemble at the Institute of Production
-              Technology in Mannheim.</p>
+              <p>Replacement, installation, and programming of an ABB IRB2400 robot ensemble at the Institute of
+                Production
+                Technology in Mannheim.</p>
           </li>
         </ul>
       </section>
@@ -444,7 +468,8 @@
           </li>
           <li>
             <strong>LPToolz</strong>
-            <p>Nodejs app for automating Liquidity Pool positions at Uniswap / Sushiswap on the Polygon (matic) network.</p>
+            <p>Nodejs app for automating Liquidity Pool positions at Uniswap / Sushiswap on the Polygon (matic) network.
+            </p>
             <a href="https://github.com/ferpar/lptoolz" target="_blank">repository (private)</a>
           </li>
           <li>
