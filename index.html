@@ -99,6 +99,7 @@
       --color-text-dark: #f9f9f9;
       --dark-mode-titles: #c5d5ec;
       --color-background-dark: #333;
+      --color-link-dark: lightskyblue;
     }
 
     body {
@@ -237,6 +238,16 @@
       overflow: hidden;
     }
 
+    h3 {
+      margin-top: 1rem;
+    }
+
+    /* remove text underline */
+    a:link {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
     @media (prefers-color-scheme: dark) {
       body {
         background-color: var(--color-background-dark);
@@ -258,7 +269,7 @@
       }
 
       a:link {
-        color: lightskyblue;
+        color: var(--color-link-dark);
       }
 
       a:visited {
@@ -426,16 +437,16 @@
         <h3>Full Time</h3>
         <ul>
           <li>
-            <strong>Agiliza Seller Platform</strong>
-            <p>Suite of tools designed to increase profitability for Amazon FBA sellers.</p>
+            <strong> <a href="https://agilizaseller.com" target="_blank">Agiliza Seller Platform</a></strong>
+            <p>Suite of tools designed to increase profitability for Amazon FBA sellers. </p>
           </li>
           <li>
-            <strong>DeRISK Platform v4 & v5</strong>
+            <strong><a href="https://www.denexus.io/products/derisk/cyber-risk-quantification" target="_blank">DeRISK Platform v4 & v5</a></strong>
             <p>Risk analytics platform, leading a team of front-end developers while collaborating closely with business
               stakeholders, data scientists, and engineers to bring a complex project to life.</p>
           </li>
           <li>
-            <strong>El Pais -SEO optimization-</strong>
+            <strong><a href="https://www.elpais.com" target="_blank">El Pais -SEO optimization-</a></strong>
             <p>SEO including performance optimization, structured data, opengraph data among other improvements within
               the React-based Washington Post's CMS in use by El País.</p>
           </li>
@@ -445,7 +456,7 @@
               reminders, as well as batch SMS marketing campaigns.</p>
           </li>
           <li>
-            <strong>JoinedApp</strong>
+            <strong><a href="https://www.joined.app/">JoinedApp</a></strong>
             <p>React-based components for a Chatbot store, allowing to book dates and purchase products from within
               Facebook Messenger.</p>
           </li>
@@ -456,15 +467,14 @@
           </li>
           <h3>Freelance</h3>
           <li>
-            <strong>Site for Centro Leon Hebreo</strong>
+            <strong><a href="https://centroleonhebreo.com" target="_blank">Site for Centro Leon Hebreo</a></strong>
             <p>Official site built with Next.js 13 for an organization dedicated to Hebrew heritage studies.</p>
-            <a href="https://centroleonhebreo.com" target="_blank">centroleonhebreo.com</a>
             <a href="https://github.com/ferpar/clh" target="_blank">repository</a>
           </li>
           <h3>Personal</h3>
           <li>
             <strong>3D Portfolio</strong>
-            <p>Personal site showcasing 3D models and animations created with Three.js."</p>
+            <p>Personal site showcasing 3D models and animations created with Three.js.</p>
           </li>
           <li>
             <strong>LPToolz</strong>
@@ -474,7 +484,7 @@
           </li>
           <li>
             <strong>Notetaker - t3</strong>
-            <p>App for markdown note taking, based on Theos T3 stack.</p>
+            <p>App for markdown note taking, based on Theo's T3 stack.</p>
             <a href="https://github.com/ferpar/t3notetaker" target="_blank">repository</a>
           </li>
           <li>
