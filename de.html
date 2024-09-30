@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FERNANDO PÉREZ DE AYALA - Resume / CV </title>
+  <!-- fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <!-- styles -->
+  <style>
+    /*
+  1. Use a more-intuitive box-sizing model.
+*/
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    /*
+  2. Remove default margin
+*/
+    * {
+      margin: 0;
+    }
+
+    /*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+    body {
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /*
+  5. Improve media defaults
+*/
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    /*
+  6. Remove built-in form typography styles
+*/
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    /*
+  7. Avoid text overflows
+*/
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+    }
+
+    /*
+  8. Create a root stacking context
+*/
+    #root,
+    #__next {
+      isolation: isolate;
+    }
+
+    /* end reset */
+
+    /* color variables */
+    :root {
+      --color-primary: #3498db;
+      /* --color-secondary: #2ecc71;
+      --color-tertiary: #e74c3c;
+      --color-quaternary: #f39c12;
+      --color-quinary: #9b59b6; */
+      --color-text: #333;
+      --color-background: #9bd7ff;
+      --color-border: #3498db;
+      --color-titles: #2c3e50;
+
+      /* dark mode */
+      --color-text-dark: #f9f9f9;
+      --dark-mode-titles: #c5d5ec;
+      --color-background-dark: #333;
+      --color-link-dark: lightskyblue;
+    }
+
+    body {
+      background-color: #ffffff;
+      font-family: "Saira", system-ui;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings:
+        "wdth" 100;
+      line-height: 1.6;
+      margin: 0;
+      color: var(--color-text);
+    }
+
+    .wrapper {
+      overflow-x: hidden;
+      padding: 0 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .header {
+      background-color: var(--color-background);
+      padding: 1rem 50vw;
+      margin: 0 -50vw;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0;
+    }
+
+    .main-title,
+    .subtitle {
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+
+    .main-title>span {
+      text-align: center;
+    }
+
+    .subtitle {
+      margin-bottom: 1rem;
+    }
+
+    .tech-summary {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tech-summary p {
+      margin: 0 1rem 0 0;
+      text-align: center;
+    }
+
+    .tech-summary p::before {
+      content: "🔧";
+      margin-right: 0.5rem;
+    }
+
+    h1,
+    h2 {
+      color: var(--color-titles);
+    }
+
+    h1 {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--color-border);
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    @media (min-width: 600px) {
+      .contact {
+        position: absolute;
+        top: 3rem;
+        justify-content: flex-end;
+        flex-direction: column;
+        right: calc(50vw + 2rem);
+      }
+    }
+
+    .link-with-svg {
+      display: flex;
+      gap: 6px;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .skill-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill-list>li {
+      padding: 0.5rem;
+      border: 1px solid #3498db;
+      border-radius: 5px;
+    }
+
+    .round {
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    h3 {
+      margin-top: 1rem;
+    }
+
+    /* remove text underline */
+    a:link {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    .row-with-svg {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: var(--color-background-dark);
+        color: var(--color-text-dark);
+      }
+
+      .header {
+        background-color: #10212e;
+      }
+
+      h1,
+      h2 {
+        color: var(--dark-mode-titles);
+      }
+
+      .skill-list>li {
+        border-color: var(--color-border);
+        color: var(--color-text-dark);
+      }
+
+      a:link {
+        color: var(--color-link-dark);
+      }
+
+      a:visited {
+        color: #9364bf;
+      }
+
+      a:hover {
+        color: #ffffff;
+      }
+
+      a:active {
+        color: #ff4040;
+        text-decoration: none;
+        font-weight: normal;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <div class="header">
+        <h1 class="main-title"><span style="padding-right: 1rem;">FERNANDO </span><span>PÉREZ DE AYALA</span></h1>
+        <h2 class="subtitle">Softwareentwickler</h2>
+        <div class="tech-summary">
+          <p>SPA & Server-Side</p>
+          <p>Framework-unabhängig</p>
+          <p>Sauberes Coding</p>
+          <p>Maßgeschneiderte Datenvisualisierungen</p>
+          <p>In-Browser 3D Rendering</p>
+        </div>
+        <div class="contact">
+          <div class="link-with-svg">
+            <a href="mailto:ferp@protonmail.ch">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="52 42 88 66" height="20" width="20">
+                <path fill="#4285f4" d="M58 108h14V74L52 59v43c0 3.32 2.69 6 6 6" />
+                <path fill="#34a853" d="M120 108h14c3.32 0 6-2.69 6-6V59l-20 15" />
+                <path fill="#fbbc04" d="M120 48v26l20-15v-8c0-7.42-8.47-11.65-14.4-7.2" />
+                <path fill="#ea4335" d="M72 74V48l24 18 24-18v26L96 92" />
+                <path fill="#c5221f" d="M52 51v8l20 15V48l-5.6-4.2c-5.94-4.45-14.4-.22-14.4 7.2" />
+              </svg>
+            </a>
+          </div>
+          <div class="link-with-svg">
+            <a href="https://www.linkedin.com/in/fernando-perez-de-ayala/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 0 72 72" width="20">
+                <g fill="none" fill-rule="evenodd">
+                  <path
+                    d="M36,72 L36,72 C55.882251,72 72,55.882251 72,36 L72,36 C72,16.117749 55.882251,-3.65231026e-15 36,0 L36,0 C16.117749,3.65231026e-15 -2.4348735e-15,16.117749 0,36 L0,36 C2.4348735e-15,55.882251 16.117749,72 36,72 Z"
+                    fill="#007EBB" />
+                  <path
+                    d="M59,57 L49.959375,57 L49.959375,41.6017895 C49.959375,37.3800228 48.3552083,35.0207581 45.0136719,35.0207581 C41.3785156,35.0207581 39.4792969,37.4759395 39.4792969,41.6017895 L39.4792969,57 L30.7666667,57 L30.7666667,27.6666667 L39.4792969,27.6666667 L39.4792969,31.6178624 C39.4792969,31.6178624 42.0989583,26.7704897 48.3236979,26.7704897 C54.5455729,26.7704897 59,30.5699366 59,38.4279486 L59,57 Z M20.372526,23.8257036 C17.4048177,23.8257036 15,21.4020172 15,18.4128518 C15,15.4236864 17.4048177,13 20.372526,13 C23.3402344,13 25.7436198,15.4236864 25.7436198,18.4128518 C25.7436198,21.4020172 23.3402344,23.8257036 20.372526,23.8257036 Z M15.8736979,57 L24.958724,57 L24.958724,27.6666667 L15.8736979,27.6666667 L15.8736979,57 Z"
+                    fill="#FFF" />
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="link-with-svg">
+            <a href="https://www.github.com/ferpar" target="_blank" class="round">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                viewBox="-6.39108 -10.38875 55.38936 62.3325" style="background-color: #0F0E0F">
+                <g fill="#fff">
+                  <path
+                    d="M21.3035 0C9.5395 0 0 9.5373 0 21.3035c0 9.4122 6.1041 17.3976 14.5687 20.2146 1.0646.1972 1.4555-.4622 1.4555-1.0249 0-.5076-.0198-2.1861-.0289-3.9662-5.9266 1.2887-7.1772-2.5136-7.1772-2.5136-.9691-2.462-2.3654-3.1171-2.3654-3.1171-1.9329-1.3222.1457-1.295.1457-1.295 2.1392.1502 3.2656 2.1956 3.2656 2.1956 1.9001 3.2565 4.9837 2.315 6.1994 1.7706.1916-1.3765.7433-2.3167 1.3526-2.8487-4.7319-.5383-9.706-2.3653-9.706-10.5283 0-2.3255.8322-4.2259 2.195-5.7178-.2212-.537-.9504-2.7037.2067-5.638 0 0 1.789-.5723 5.8596 2.184 1.6994-.472 3.5218-.7088 5.3323-.7172 1.8104.008 3.6343.2451 5.3368.7172 4.0661-2.7563 5.8526-2.184 5.8526-2.184 1.1596 2.9343.4304 5.101.2092 5.638 1.366 1.4919 2.1921 3.3923 2.1921 5.7178 0 8.1827-4.9837 9.984-9.7275 10.5114.7642.6611 1.445 1.9576 1.445 3.9451 0 2.8505-.0243 5.1446-.0243 5.8462 0 .5673.3831 1.2316 1.463 1.0224 8.4603-2.8201 14.5566-10.8028 14.5566-20.212C42.6071 9.5372 33.0691 0 21.3036 0"
+                    fill-rule="evenodd" />
+                  <path
+                    d="M8.0689 30.587c-.047.1061-.2135.1379-.3651.0649-.155-.0695-.2413-.2138-.1913-.32.046-.1087.2124-.139.367-.0663.1545.0695.2426.2152.1894.3214m.863.9625c-.1016.0942-.3006.0504-.435-.0984-.1397-.1485-.1655-.3475-.0624-.4427.1048-.0942.2974-.0501.4367.0984.1397.1503.1669.3475.0607.4427m.8399 1.2268c-.1305.091-.3443.006-.4763-.1834-.1305-.1898-.1305-.417.003-.508.132-.091.3426-.009.4763.1788.1302.1926.1302.4198-.003.5126m1.1506 1.1855c-.1167.1287-.3654.0942-.5475-.0815-.1862-.1718-.238-.4156-.1213-.5444.1185-.129.3686-.0928.552.0815.185.1715.241.417.1168.5444m1.5876.6882c-.052.167-.291.2424-.5324.1715-.241-.073-.3986-.268-.35-.4367.0502-.1683.2908-.247.5338-.1711.2406.0727.3987.2667.3486.4364m1.7435.1275c.006.1757-.1986.3214-.4519.3245-.2547.006-.461-.1365-.4639-.3094 0-.1774.2004-.3213.4547-.326.2533-.005.4611.1366.4611.3109m1.6223-.276c.0303.171-.1457.3471-.3972.394-.2473.0455-.4763-.0607-.5077-.2303-.0307-.1757.1482-.3517.3955-.3972.2519-.0437.4773.0593.5094.2335" />
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <section>
+        <h2 class="section-title">Zusammenfassung</h2>
+        <p style="padding-bottom: 1rem;"><strong>Erfahrener Full Stack Entwickler</strong> mit Schwerpunkt auf dem <strong>PERN-Stack</strong>,
+          Client- und
+          Server-seitiger Entwicklung, <strong>In-Browser 3D-Rendering</strong> und maßgeschneiderten
+          Datenvisualisierungen.
+          Versiert in <strong>Testgetriebener Entwicklung</strong> und der Leitung von Frontend-Teams. Erfahren in
+          <strong>React, Nextjs, RESTful APIs</strong>. Mit einem <strong>Ingenieur-Hintergrund</strong>, um komplexe
+          und
+          herausfordernde Projekte erfolgreich zu liefern.
+        </p>
+
+        <p>Als erfahrener Full Stack Entwickler bringe ich <strong>tiefes Wissen über SPA-Architektur</strong> mit,
+          insbesondere mit Fokus auf <strong>Testbarkeit und Skalierbarkeit</strong>. Ich gedeihe in
+          <strong>kollaborativen</strong> Umgebungen mit Product Owners, Kunden und Designern und balanciere
+          <strong>Team-Synergie</strong> mit einem starken Gespür für <strong>UI-Design</strong> und <strong>visuelle
+            Harmonie</strong>. <strong>Ebenfalls eigenständig arbeitend</strong>, verbinde ich <strong>technische
+            Expertise</strong> mit einem ausgeprägten Auge für <strong>Ästhetik</strong>.
+        </p>
+      </section>
+
+
+      <section>
+        <h2 class="section-title">Erfahrung</h2>
+        <ul>
+          <li>
+            <strong>Lead Developer & Mitgründer</strong> - <b><i>Agiliza Seller S.L.</i></b> - Feb 2024 bis heute
+            <p>Design und Entwicklung einer Web-Plattform. Haupttechnologien: React, Nextjs und FastAPI.</p>
+          </li>
+          <li>
+            <strong>Full Stack Entwickler</strong> - <b><i>Freiberuflich</i></b> - Mai 2023 bis Feb 2024
+            <p>Eigenständige Durchführung und Zusammenarbeit an verschiedenen Projekten, einschließlich Web-3-basierten
+              Anwendungen und Hauptwebseiten mit TypeScript und Next.js.</p>
+          </li>
+          <li>
+            <strong>Full Stack Entwickler / Frontend Tech Lead</strong> - <b><i>DeNexus Inc.</i></b> - Okt 2020 bis Apr
+            2023
+            <p>Entwicklung der Flaggschiff-Risikoanalyse-Plattform "DeRisk" von der Prototyp-Phase bis zur Marktreife.
+              Zusammenarbeit bei Datenvisualisierungen, Leitung eines Frontend-Teams, API-Integration und Mentoring
+              neuer Teammitglieder.</p>
+          </li>
+          <li>
+            <strong>Web Entwickler</strong> - <b><i>Flat 101</i></b> - Jun 2020 bis Okt 2020
+            <p>Suchmaschinenoptimierung (SEO) auf dem React-basierten CMS für die nationale Zeitung El País.</p>
+          </li>
+          <li>
+            <strong>Full Stack Web Entwickler</strong> - <b><i>Dentt</i></b> - Jul 2019 bis Jul 2020
+            <p>Entwicklung und Bereitstellung eines Marketingtools für Zahnärzte mit Node.js und React, Schwerpunkt auf
+              API-Integration und automatisierten Aufgaben.</p>
+          </li>
+          <li>
+            <strong>Frontend Web Entwickler</strong> - <b><i>JoinedApp</i></b> - Feb 2019 bis Jun 2019
+            <p>Refactoring und Entwicklung komplexer React-Anwendungen mit Schwerpunkt auf Tests und agilen Methoden.
+            </p>
+          </li>
+          <li>
+            <strong>Automobilingenieur</strong> - <b><i>Iveco S.P.A.</i></b> - Okt 2016 bis Jan 2019
+            <p>Design und Anpassung von Schwerfahrzeugen für Sonderzwecke, Qualitätskontrolle durch 3D-Analysen, und
+              Implementierung einer SQL-Datenbank für Backend- und Frontend-Nutzung.</p>
+          </li>
+          <li>
+            <strong>Labortechniker</strong> - <b><i>Hochschule Mannheim</i></b> - Jan 2013 bis Aug 2013
+            <p>Austausch, Installation und Programmierung eines ABB IRB2400 Roboter-Systems am Institut für
+              Produktionstechnik in Mannheim.</p>
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2 class="section-title">Ausbildung</h2>
+        <ul>
+          <li>
+            <strong>Ironhack</strong> - Webentwicklung, 2018
+          </li>
+          <li>
+            <strong>Hochschule Mannheim</strong> - Bachelor of Engineering, Maschinenbau, 2013
+          </li>
+          <li>
+            <strong>Universidad de Sevilla</strong> - Bachelor of Engineering, Maschinenbau, 2007 bis 2013
+          </li>
+        </ul>
+      </section>
+
+
+      <section>
+        <h2 class="section-title">Projekt-Highlights</h2>
+        <h3>Vollzeit</h3>
+        <ul>
+          <li>
+            <strong><a href="https://agilizaseller.com" target="_blank">Agiliza Seller Plattform</a></strong>
+            <p>Software-Tool-Suite, um die Rentabilität von Amazon FBA-Verkäufern zu steigern.</p>
+          </li>
+          <li>
+            <strong><a href="https://www.denexus.io/products/derisk/cyber-risk-quantification" target="_blank">DeRISK
+                Plattform v4 & v5</a></strong>
+            <p>Risikomanagement-Plattform, Leitung eines Teams von Frontend-Entwicklern in enger Zusammenarbeit mit
+              Geschäftsinteressenten, Datenwissenschaftlern und Ingenieuren, um ein komplexes Projekt zum Leben zu
+              erwecken.</p>
+          </li>
+          <li>
+            <strong><a href="https://www.elpais.com" target="_blank">El País -SEO-Optimierung-</a></strong>
+            <p>SEO, einschließlich Leistungsoptimierung, strukturierte Daten, OpenGraph-Daten sowie weitere
+              Verbesserungen innerhalb des React-basierten CMS der Washington Post, das von El País genutzt wird.</p>
+          </li>
+          <li>
+            <strong>Dentt Plattform</strong>
+            <p>Marketing-Tool für Zahnärzte zur Bereitstellung von Kundenanalysen, Terminverwaltung mit automatisierten
+              Erinnerungen sowie SMS-Marketingkampagnen im Batch-Verfahren.</p>
+          </li>
+          <li>
+            <strong><a href="https://www.joined.app/">JoinedApp Chatbot-Komponenten</a></strong>
+            <p>React-basierte Komponenten für einen Chatbot-Store, der es ermöglicht, Termine zu buchen und Produkte
+              direkt in Facebook Messenger zu kaufen.</p>
+          </li>
+          <li>
+            <strong>Verpackungsdatenbank "Packabase"</strong>
+            <p>Konsultationstool für zehntausende Ergebnisse aus 3D-Analysen der modularen Architektur von Iveco Mittel-
+              und Schwerlast-Lkw, die täglich erstellt wurden.</p>
+          </li>
+
+        <h3>Freiberuflich</h3>
+
+        <li>
+          <div class="row-with-svg">
+            <strong><a href="https://centroleonhebreo.com" target="_blank">Website für Centro Leon Hebreo</a></strong>
+            <div class="link-with-svg">
+              <a href="https://github.com/ferpar/t3notetaker" target="_blank" class="round">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                  viewBox="-6.39108 -10.38875 55.38936 62.3325" style="background-color: #0F0E0F">
+                  <g fill="#fff">
+                    <path
+                      d="M21.3035 0C9.5395 0 0 9.5373 0 21.3035c0 9.4122 6.1041 17.3976 14.5687 20.2146 1.0646.1972 1.4555-.4622 1.4555-1.0249 0-.5076-.0198-2.1861-.0289-3.9662-5.9266 1.2887-7.1772-2.5136-7.1772-2.5136-.9691-2.462-2.3654-3.1171-2.3654-3.1171-1.9329-1.3222.1457-1.295.1457-1.295 2.1392.1502 3.2656 2.1956 3.2656 2.1956 1.9001 3.2565 4.9837 2.315 6.1994 1.7706.1916-1.3765.7433-2.3167 1.3526-2.8487-4.7319-.5383-9.706-2.3653-9.706-10.5283 0-2.3255.8322-4.2259 2.195-5.7178-.2212-.537-.9504-2.7037.2067-5.638 0 0 1.789-.5723 5.8596 2.184 1.6994-.472 3.5218-.7088 5.3323-.7172 1.8104.008 3.6343.2451 5.3368.7172 4.0661-2.7563 5.8526-2.184 5.8526-2.184 1.1596 2.9343.4304 5.101.2092 5.638 1.366 1.4919 2.1921 3.3923 2.1921 5.7178 0 8.1827-4.9837 9.984-9.7275 10.5114.7642.6611 1.445 1.9576 1.445 3.9451 0 2.8505-.0243 5.1446-.0243 5.8462 0 .5673.3831 1.2316 1.463 1.0224 8.4603-2.8201 14.5566-10.8028 14.5566-20.212C42.6071 9.5372 33.0691 0 21.3036 0"
+                      fill-rule="evenodd" />
+                    <path
+                      d="M8.0689 30.587c-.047.1061-.2135.1379-.3651.0649-.155-.0695-.2413-.2138-.1913-.32.046-.1087.2124-.139.367-.0663.1545.0695.2426.2152.1894.3214m.863.9625c-.1016.0942-.3006.0504-.435-.0984-.1397-.1485-.1655-.3475-.0624-.4427.1048-.0942.2974-.0501.4367.0984.1397.1503.1669.3475.0607.4427m.8399 1.2268c-.1305.091-.3443.006-.4763-.1834-.1305-.1898-.1305-.417.003-.508.132-.091.3426-.009.4763.1788.1302.1926.1302.4198-.003.5126m1.1506 1.1855c-.1167.1287-.3654.0942-.5475-.0815-.1862-.1718-.238-.4156-.1213-.5444.1185-.129.3686-.0928.552.0815.185.1715.241.417.1168.5444m1.5876.6882c-.052.167-.291.2424-.5324.1715-.241-.073-.3986-.268-.35-.4367.0502-.1683.2908-.247.5338-.1711.2406.0727.3987.2667.3486.4364m1.7435.1275c.006.1757-.1986.3214-.4519.3245-.2547.006-.461-.1365-.4639-.3094 0-.1774.2004-.3213.4547-.326.2533-.005.4611.1366.4611.3109m1.6223-.276c.0303.171-.1457.3471-.3972.394-.2473.0455-.4763-.0607-.5077-.2303-.0307-.1757.1482-.3517.3955-.3972.2519-.0437.4773.0593.5094.2335" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p>Offizielle Website, erstellt mit Next.js 13, für eine Organisation, die sich dem Studium des hebräischen
+            Erbes widmet.</p>
+
+        </li>
+        <h3>Persönlich</h3>
+        <li>
+          <div class="row-with-svg">
+            <strong><a href="https://threejs-64-simple-portfolio.vercel.app/" target="_blank">3D
+                Portfolio</a></strong>
+            <div class="link-with-svg">
+              <a href="https://github.com/ferpar/threejs-64-simple-portfolio" target="_blank" class="round">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                  viewBox="-6.39108 -10.38875 55.38936 62.3325" style="background-color: #0F0E0F">
+                  <g fill="#fff">
+                    <path
+                      d="M21.3035 0C9.5395 0 0 9.5373 0 21.3035c0 9.4122 6.1041 17.3976 14.5687 20.2146 1.0646.1972 1.4555-.4622 1.4555-1.0249 0-.5076-.0198-2.1861-.0289-3.9662-5.9266 1.2887-7.1772-2.5136-7.1772-2.5136-.9691-2.462-2.3654-3.1171-2.3654-3.1171-1.9329-1.3222.1457-1.295.1457-1.295 2.1392.1502 3.2656 2.1956 3.2656 2.1956 1.9001 3.2565 4.9837 2.315 6.1994 1.7706.1916-1.3765.7433-2.3167 1.3526-2.8487-4.7319-.5383-9.706-2.3653-9.706-10.5283 0-2.3255.8322-4.2259 2.195-5.7178-.2212-.537-.9504-2.7037.2067-5.638 0 0 1.789-.5723 5.8596 2.184 1.6994-.472 3.5218-.7088 5.3323-.7172 1.8104.008 3.6343.2451 5.3368.7172 4.0661-2.7563 5.8526-2.184 5.8526-2.184 1.1596 2.9343.4304 5.101.2092 5.638 1.366 1.4919 2.1921 3.3923 2.1921 5.7178 0 8.1827-4.9837 9.984-9.7275 10.5114.7642.6611 1.445 1.9576 1.445 3.9451 0 2.8505-.0243 5.1446-.0243 5.8462 0 .5673.3831 1.2316 1.463 1.0224 8.4603-2.8201 14.5566-10.8028 14.5566-20.212C42.6071 9.5372 33.0691 0 21.3036 0"
+                      fill-rule="evenodd" />
+                    <path
+                      d="M8.0689 30.587c-.047.1061-.2135.1379-.3651.0649-.155-.0695-.2413-.2138-.1913-.32.046-.1087.2124-.139.367-.0663.1545.0695.2426.2152.1894.3214m.863.9625c-.1016.0942-.3006.0504-.435-.0984-.1397-.1485-.1655-.3475-.0624-.4427.1048-.0942.2974-.0501.4367.0984.1397.1503.1669.3475.0607.4427m.8399 1.2268c-.1305.091-.3443.006-.4763-.1834-.1305-.1898-.1305-.417.003-.508.132-.091.3426-.009.4763.1788.1302.1926.1302.4198-.003.5126m1.1506 1.1855c-.1167.1287-.3654.0942-.5475-.0815-.1862-.1718-.238-.4156-.1213-.5444.1185-.129.3686-.0928.552.0815.185.1715.241.417.1168.5444m1.5876.6882c-.052.167-.291.2424-.5324.1715-.241-.073-.3986-.268-.35-.4367.0502-.1683.2908-.247.5338-.1711.2406.0727.3987.2667.3486.4364m1.7435.1275c.006.1757-.1986.3214-.4519.3245-.2547.006-.461-.1365-.4639-.3094 0-.1774.2004-.3213.4547-.326.2533-.005.4611.1366.4611.3109m1.6223-.276c.0303.171-.1457.3471-.3972.394-.2473.0455-.4763-.0607-.5077-.2303-.0307-.1757.1482-.3517.3955-.3972.2519-.0437.4773.0593.5094.2335" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p>Persönliche Website mit 3D-Modellen und Animationen, erstellt mit Three.js.</p>
+
+        </li>
+        <li>
+          <strong>LPToolz</strong>
+          <p>Node.js-App zur Automatisierung von Liquidity-Pool-Positionen bei Uniswap / Sushiswap auf dem Polygon
+            (Matic) Netzwerk.</p>
+
+        </li>
+        <li>
+          <div class="row-with-svg">
+            <strong>Notetaker - t3</strong>
+            <div class="link-with-svg">
+              <a href="https://github.com/ferpar/t3notetaker" target="_blank" class="round">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                  viewBox="-6.39108 -10.38875 55.38936 62.3325" style="background-color: #0F0E0F">
+                  <g fill="#fff">
+                    <path
+                      d="M21.3035 0C9.5395 0 0 9.5373 0 21.3035c0 9.4122 6.1041 17.3976 14.5687 20.2146 1.0646.1972 1.4555-.4622 1.4555-1.0249 0-.5076-.0198-2.1861-.0289-3.9662-5.9266 1.2887-7.1772-2.5136-7.1772-2.5136-.9691-2.462-2.3654-3.1171-2.3654-3.1171-1.9329-1.3222.1457-1.295.1457-1.295 2.1392.1502 3.2656 2.1956 3.2656 2.1956 1.9001 3.2565 4.9837 2.315 6.1994 1.7706.1916-1.3765.7433-2.3167 1.3526-2.8487-4.7319-.5383-9.706-2.3653-9.706-10.5283 0-2.3255.8322-4.2259 2.195-5.7178-.2212-.537-.9504-2.7037.2067-5.638 0 0 1.789-.5723 5.8596 2.184 1.6994-.472 3.5218-.7088 5.3323-.7172 1.8104.008 3.6343.2451 5.3368.7172 4.0661-2.7563 5.8526-2.184 5.8526-2.184 1.1596 2.9343.4304 5.101.2092 5.638 1.366 1.4919 2.1921 3.3923 2.1921 5.7178 0 8.1827-4.9837 9.984-9.7275 10.5114.7642.6611 1.445 1.9576 1.445 3.9451 0 2.8505-.0243 5.1446-.0243 5.8462 0 .5673.3831 1.2316 1.463 1.0224 8.4603-2.8201 14.5566-10.8028 14.5566-20.212C42.6071 9.5372 33.0691 0 21.3036 0"
+                      fill-rule="evenodd" />
+                    <path
+                      d="M8.0689 30.587c-.047.1061-.2135.1379-.3651.0649-.155-.0695-.2413-.2138-.1913-.32.046-.1087.2124-.139.367-.0663.1545.0695.2426.2152.1894.3214m.863.9625c-.1016.0942-.3006.0504-.435-.0984-.1397-.1485-.1655-.3475-.0624-.4427.1048-.0942.2974-.0501.4367.0984.1397.1503.1669.3475.0607.4427m.8399 1.2268c-.1305.091-.3443.006-.4763-.1834-.1305-.1898-.1305-.417.003-.508.132-.091.3426-.009.4763.1788.1302.1926.1302.4198-.003.5126m1.1506 1.1855c-.1167.1287-.3654.0942-.5475-.0815-.1862-.1718-.238-.4156-.1213-.5444.1185-.129.3686-.0928.552.0815.185.1715.241.417.1168.5444m1.5876.6882c-.052.167-.291.2424-.5324.1715-.241-.073-.3986-.268-.35-.4367.0502-.1683.2908-.247.5338-.1711.2406.0727.3987.2667.3486.4364m1.7435.1275c.006.1757-.1986.3214-.4519.3245-.2547.006-.461-.1365-.4639-.3094 0-.1774.2004-.3213.4547-.326.2533-.005.4611.1366.4611.3109m1.6223-.276c.0303.171-.1457.3471-.3972.394-.2473.0455-.4763-.0607-.5077-.2303-.0307-.1757.1482-.3517.3955-.3972.2519-.0437.4773.0593.5094.2335" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p>App für Markdown-Notizen, basierend auf Theos T3-Stack.</p>
+        </li>
+        <li>
+          <div class="row-with-svg">
+            <strong>Nidek - scraper</strong>
+            <div class="link-with-svg">
+              <a href="https://github.com/ferpar/nidek" target="_blank" class="round">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                  viewBox="-6.39108 -10.38875 55.38936 62.3325" style="background-color: #0F0E0F">
+                  <g fill="#fff">
+                    <path
+                      d="M21.3035 0C9.5395 0 0 9.5373 0 21.3035c0 9.4122 6.1041 17.3976 14.5687 20.2146 1.0646.1972 1.4555-.4622 1.4555-1.0249 0-.5076-.0198-2.1861-.0289-3.9662-5.9266 1.2887-7.1772-2.5136-7.1772-2.5136-.9691-2.462-2.3654-3.1171-2.3654-3.1171-1.9329-1.3222.1457-1.295.1457-1.295 2.1392.1502 3.2656 2.1956 3.2656 2.1956 1.9001 3.2565 4.9837 2.315 6.1994 1.7706.1916-1.3765.7433-2.3167 1.3526-2.8487-4.7319-.5383-9.706-2.3653-9.706-10.5283 0-2.3255.8322-4.2259 2.195-5.7178-.2212-.537-.9504-2.7037.2067-5.638 0 0 1.789-.5723 5.8596 2.184 1.6994-.472 3.5218-.7088 5.3323-.7172 1.8104.008 3.6343.2451 5.3368.7172 4.0661-2.7563 5.8526-2.184 5.8526-2.184 1.1596 2.9343.4304 5.101.2092 5.638 1.366 1.4919 2.1921 3.3923 2.1921 5.7178 0 8.1827-4.9837 9.984-9.7275 10.5114.7642.6611 1.445 1.9576 1.445 3.9451 0 2.8505-.0243 5.1446-.0243 5.8462 0 .5673.3831 1.2316 1.463 1.0224 8.4603-2.8201 14.5566-10.8028 14.5566-20.212C42.6071 9.5372 33.0691 0 21.3036 0"
+                      fill-rule="evenodd" />
+                    <path
+                      d="M8.0689 30.587c-.047.1061-.2135.1379-.3651.0649-.155-.0695-.2413-.2138-.1913-.32.046-.1087.2124-.139.367-.0663.1545.0695.2426.2152.1894.3214m.863.9625c-.1016.0942-.3006.0504-.435-.0984-.1397-.1485-.1655-.3475-.0624-.4427.1048-.0942.2974-.0501.4367.0984.1397.1503.1669.3475.0607.4427m.8399 1.2268c-.1305.091-.3443.006-.4763-.1834-.1305-.1898-.1305-.417.003-.508.132-.091.3426-.009.4763.1788.1302.1926.1302.4198-.003.5126m1.1506 1.1855c-.1167.1287-.3654.0942-.5475-.0815-.1862-.1718-.238-.4156-.1213-.5444.1185-.129.3686-.0928.552.0815.185.1715.241.417.1168.5444m1.5876.6882c-.052.167-.291.2424-.5324.1715-.241-.073-.3986-.268-.35-.4367.0502-.1683.2908-.247.5338-.1711.2406.0727.3987.2667.3486.4364m1.7435.1275c.006.1757-.1986.3214-.4519.3245-.2547.006-.461-.1365-.4639-.3094 0-.1774.2004-.3213.4547-.326.2533-.005.4611.1366.4611.3109m1.6223-.276c.0303.171-.1457.3471-.3972.394-.2473.0455-.4763-.0607-.5077-.2303-.0307-.1757.1482-.3517.3955-.3972.2519-.0437.4773.0593.5094.2335" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p>Scraping-Tool, das Jobangebote für dich heraussucht.</p>
+        </li>
+        <li>
+          <strong>JobTrackr</strong>
+          <p>Kleine Anwendung zur Verfolgung von Jobbewerbungen.</p>
+          <a href="https://github.com/ferpar/JobTrackr" target="_blank">client</a>
+          <a href="https://github.com/ferpar/jTrackerServices" target="_blank">server</a>
+        </li>
+        <h3>Demos</h3>
+        <li>
+          <strong>Survivors</strong>
+          <p>Interaktive Visualisierung der Ergebnisse einer DCA-ähnlichen Strategie. Die Ergebnisse werden entlang
+            zweier Achsen berechnet und als Heatmap angezeigt. Für jeden Punkt der Heatmap wird ein Kerzendiagramm
+            zusammen mit einer kumulierten Darstellung der Mittel gezeichnet.</p>
+
+          <a href="https://github.com/ferpar/survivorUI" target="_blank">client</a>
+          <a href="https://github.com/ferpar/survivor" target="_blank">server</a>
+        </li>
+        <li>
+          <div class="row-with-svg">
+            <strong><a href="https://react-d3-framer.vercel.app" target="_blank">React D3 Framer</a></strong>
+            <div class="link-with-svg">
+              <a href="https://github.com/ferpar/react-d3-framer" target="_blank" class="round">
+                <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20"
+                  viewBox="-6.39108 -10.38875 55.38936 62.3325" style="background-color: #0F0E0F">
+                  <g fill="#fff">
+                    <path
+                      d="M21.3035 0C9.5395 0 0 9.5373 0 21.3035c0 9.4122 6.1041 17.3976 14.5687 20.2146 1.0646.1972 1.4555-.4622 1.4555-1.0249 0-.5076-.0198-2.1861-.0289-3.9662-5.9266 1.2887-7.1772-2.5136-7.1772-2.5136-.9691-2.462-2.3654-3.1171-2.3654-3.1171-1.9329-1.3222.1457-1.295.1457-1.295 2.1392.1502 3.2656 2.1956 3.2656 2.1956 1.9001 3.2565 4.9837 2.315 6.1994 1.7706.1916-1.3765.7433-2.3167 1.3526-2.8487-4.7319-.5383-9.706-2.3653-9.706-10.5283 0-2.3255.8322-4.2259 2.195-5.7178-.2212-.537-.9504-2.7037.2067-5.638 0 0 1.789-.5723 5.8596 2.184 1.6994-.472 3.5218-.7088 5.3323-.7172 1.8104.008 3.6343.2451 5.3368.7172 4.0661-2.7563 5.8526-2.184 5.8526-2.184 1.1596 2.9343.4304 5.101.2092 5.638 1.366 1.4919 2.1921 3.3923 2.1921 5.7178 0 8.1827-4.9837 9.984-9.7275 10.5114.7642.6611 1.445 1.9576 1.445 3.9451 0 2.8505-.0243 5.1446-.0243 5.8462 0 .5673.3831 1.2316 1.463 1.0224 8.4603-2.8201 14.5566-10.8028 14.5566-20.212C42.6071 9.5372 33.0691 0 21.3036 0"
+                      fill-rule="evenodd" />
+                    <path
+                      d="M8.0689 30.587c-.047.1061-.2135.1379-.3651.0649-.155-.0695-.2413-.2138-.1913-.32.046-.1087.2124-.139.367-.0663.1545.0695.2426.2152.1894.3214m.863.9625c-.1016.0942-.3006.0504-.435-.0984-.1397-.1485-.1655-.3475-.0624-.4427.1048-.0942.2974-.0501.4367.0984.1397.1503.1669.3475.0607.4427m.8399 1.2268c-.1305.091-.3443.006-.4763-.1834-.1305-.1898-.1305-.417.003-.508.132-.091.3426-.009.4763.1788.1302.1926.1302.4198-.003.5126m1.1506 1.1855c-.1167.1287-.3654.0942-.5475-.0815-.1862-.1718-.238-.4156-.1213-.5444.1185-.129.3686-.0928.552.0815.185.1715.241.417.1168.5444m1.5876.6882c-.052.167-.291.2424-.5324.1715-.241-.073-.3986-.268-.35-.4367.0502-.1683.2908-.247.5338-.1711.2406.0727.3987.2667.3486.4364m1.7435.1275c.006.1757-.1986.3214-.4519.3245-.2547.006-.461-.1365-.4639-.3094 0-.1774.2004-.3213.4547-.326.2533-.005.4611.1366.4611.3109m1.6223-.276c.0303.171-.1457.3471-.3972.394-.2473.0455-.4763-.0607-.5077-.2303-.0307-.1757.1482-.3517.3955-.3972.2519-.0437.4773.0593.5094.2335" />
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <p>Animiertes Diagramm unter Verwendung von React, D3.js und Framer Motion.</p>
+        </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title">Technische Zusammenfassung</h2>
+        <ul class="skill-list">
+          <li>Full Stack Entwicklung</li>
+          <li>API REST und Webserver</li>
+          <li>Synchrone und Asynchrone Verarbeitung</li>
+          <li>Testbare UI-Architektur</li>
+          <li>React, Node.js, Django REST Framework</li>
+          <li>D3.js, Framer Motion</li>
+          <li>Typescript, ECMAScript</li>
+          <li>PostgreSQL, MongoDB</li>
+          <li>Statusverwaltung MobX - Redux</li>
+          <li>HTML5 + CSS3 + React</li>
+          <li>Playwright - E2E-Tests</li>
+          <li>SVG - Vektorgrafiken</li>
+          <li>Three.js - In-Browser 3D-Rendering</li>
+          <li>Docker - Cloud-Deployment</li>
+          <li>Vim - VSCode</li>
+          <li>Python - Flask / Django / FastAPI</li>
+          <li>PyEnv Jupyter Numpy/Pandas</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="section-title">Sprachen</h2>
+        <ul>
+          <li>Englisch - Muttersprache oder zweisprachige Kenntnisse</li>
+          <li>Spanisch - Muttersprache</li>
+          <li>Deutsch - Fließend (C1/B2)</li>
+          <li>Französisch - Eingeschränkte berufliche Kenntnisse (B1/B2)</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+</body>
+
+</html>
